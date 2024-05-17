@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: ptm-p-k
+  threads:
+    virtual:
+      enabled: true
+  cloud:
+    aws:
+      endpoint: http://localhost:4566
+      region:
+        static: us-west-1
+      credentials:
+        access-key: noop
+        secret-key: noop
+    stream:
+      bindings:
+        produceOrder-out-0:
+          destination: ptm-kinesis
+          content-type: application/json
+    function:
+      definition: produceOrder
+
+  
