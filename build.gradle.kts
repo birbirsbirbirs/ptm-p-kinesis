@@ -1,8 +1,8 @@
 plugins {
     java
-    id("org.springframework.boot") version "3.2.5"
-    id("io.spring.dependency-management") version "1.1.4"
-    id("org.graalvm.buildtools.native") version "0.9.28"
+    id("org.springframework.boot") version "3.4.1"
+    id("io.spring.dependency-management") version "1.1.7"
+    id("org.graalvm.buildtools.native") version "0.10.4"
 }
 
 group = "co.pitam"
@@ -22,6 +22,8 @@ repositories {
     mavenCentral()
 }
 
+extra["springCloudVersion"] = "2024.0.0"
+
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("org.springframework.boot:spring-boot-starter-web")
@@ -31,7 +33,13 @@ dependencies {
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
     // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-stream-binder-kinesis
-    implementation("org.springframework.cloud:spring-cloud-stream-binder-kinesis:4.0.3")
+    implementation("org.springframework.cloud:spring-cloud-stream-binder-kinesis:4.0.4")
+}
+
+dependencyManagement {
+    imports {
+        mavenBom("org.springframework.cloud:spring-cloud-dependencies:${property("springCloudVersion")}")
+    }
 }
 
 tasks.withType<Test> {
