@@ -15,7 +15,7 @@ spring:
     stream:
       bindings:
         produceOrder-out-0:
-          destination: ptm-kinesis
+          destination: ptm-kinesis-stream
           content-type: application/json
     function:
       definition: produceOrder
