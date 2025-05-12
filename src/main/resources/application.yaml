@@ -19,5 +19,7 @@ spring:
           content-type: application/json
     function:
       definition: produceOrder
-
+  output:
+    ansi:
+      enabled: always
   
