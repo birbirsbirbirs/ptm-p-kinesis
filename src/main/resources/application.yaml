@@ -17,6 +17,9 @@ spring:
         produceOrder-out-0:
           destination: ptm-kinesis-stream
           content-type: application/json
+      kinesis:
+        binder:
+          kpl-kcl-enabled: true
     function:
       definition: produceOrder
   output:
