@@ -1,6 +1,6 @@
 package co.pitam.ptmpk;
 
-import co.pitam.ptmpk.mode.Hero;
+import co.pitam.ptmpk.model.Hero;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;

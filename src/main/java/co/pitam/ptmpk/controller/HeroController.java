@@ -1,7 +1,7 @@
 package co.pitam.ptmpk.controller;
 
 import co.pitam.ptmpk.OrdersSource;
-import co.pitam.ptmpk.mode.Hero;
+import co.pitam.ptmpk.model.Hero;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

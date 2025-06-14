@@ -1,4 +1,4 @@
-package co.pitam.ptmpk.mode;
+package co.pitam.ptmpk.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
