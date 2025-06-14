@@ -27,3 +27,4 @@ al kinesis put-record --stream-name ptm-kinesis --partition-key my-partition-key
 ```shell
 al kinesis put-record --stream-name ptm-kinesis --partition-key my-partition-key --data "eyJuYW1lIjoibXktZGF0YSJ9" --explicit-hash-key "85070591730234615865843651857942052863"
 ```
+* hello world
